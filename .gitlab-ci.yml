@@ -1,0 +1,10 @@
+stages:
+  - test
+
+test:
+  image: golang:latest
+  stage: test
+  script:
+    - go mod tidy         # 依存関係を解決
+    - go test ./...       # すべてのテストを実行
+
